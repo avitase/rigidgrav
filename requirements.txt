@@ -1,0 +1,9 @@
+numpy
+numba
+scipy
+matplotlib
+nbfigtulz
+tqdm
+imageio
+jupyterlab
+ipywidgets
