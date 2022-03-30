@@ -6,8 +6,8 @@ import nbfigtulz as ftl
 
 @ftl.with_context
 def plot_error(*, q, p, m, file_name="error"):
-    T = -np.sum(m / np.linalg.norm(q, axis=-1), axis=-1)
-    V = np.sum(np.sum(p**2, axis=-1) / m, axis=-1) / 2.0
+    V = -np.sum(m / np.linalg.norm(q, axis=-1), axis=-1)
+    T = np.sum(np.sum(p**2, axis=-1) / m, axis=-1) / 2.0
     L = np.sum(q[..., 0] * p[..., 1] - q[..., 1] * p[..., 0], axis=-1)
     H = T + V
 
